@@ -33,8 +33,9 @@ class Club():
 
     def recruit_member(self, person):
         # your code goes here!
-        self.members.append(person)
-        self.numOfMem+=1
+        if (person not in self.members):
+            self.members.append(person)
+            self.numOfMem+=1
 
 
     def print_member_list(self):
